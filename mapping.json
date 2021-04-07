@@ -1,0 +1,37 @@
+{
+  "docTypes": [
+    {
+      "docTypeNames": "DU-Desktop Underwriting",
+      "fields": [
+        {
+          "fieldName": "Qualifying_Rate",
+          "hierarchy": null,
+          "canonicalPath": "CanonicalPOC.MortgageLoan",
+          "containerType": null,
+          "elementName": "QualifyingRatePercent"
+        },
+        {
+          "fieldName": "Buydown",
+          "hierarchy": null,
+          "canonicalPath": "CanonicalPOC.MortgageLoan",
+          "containerType": null,
+          "elementName": "BuydownTemporarySubsidyFundingIndicator"
+        },
+        {
+          "fieldName": "Borrower_Name_Generation",
+          "hierarchy": "CanonicalPOC.Liabilities#$0-CanonicalPOC.Liability#borrowerSeqNumber",
+          "canonicalPath": null,
+          "containerType": null,
+          "elementName": "SuffixName"
+        },
+        {
+          "fieldName": "CoBorrower_Name_Generation",
+          "hierarchy": "CanonicalPOC.Liabilities#$1-CanonicalPOC.Liability#borrowerSeqNumber",
+          "canonicalPath": null,
+          "containerType": null,
+          "elementName": "SuffixName"
+        }
+      ]
+    }
+  ]
+}
