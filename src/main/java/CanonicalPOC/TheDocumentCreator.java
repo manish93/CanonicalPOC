@@ -20,7 +20,7 @@ public class TheDocumentCreator {
         */
         Map<String, List<FieldVO>> canonicalMap = jtm.canonicalMapper("mapping.json");
         populateDataToDocument(canonicalMap, doc);
-        System.out.println(doc.toString());
+        System.out.println(jtm.ObjecToJson(doc));
     }
 
     /**

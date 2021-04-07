@@ -1,5 +1,6 @@
 package CanonicalPOC;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,5 +29,17 @@ public class JsonToMap {
             e.printStackTrace();
         }
         return map;
+    }
+
+    public String ObjecToJson(Document doc) {
+
+        ObjectMapper om = new ObjectMapper();
+        String jsonString = new String();
+        try {
+            jsonString =  om.writeValueAsString(doc);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return jsonString;
     }
 }
