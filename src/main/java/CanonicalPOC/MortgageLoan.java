@@ -18,6 +18,9 @@ public class MortgageLoan implements Serializable {
     @XmlElement(name = "LoanLevelCreditScoreValue")
     protected Integer loanLevelCreditScoreValue;
 
+    @XmlElement(name="Extensions")
+    protected Extensions extensions;
+
     public String getQualifyingRatePercent() {
         return qualifyingRatePercent;
     }
@@ -42,12 +45,21 @@ public class MortgageLoan implements Serializable {
         this.loanLevelCreditScoreValue = loanLevelCreditScoreValue;
     }
 
+    public Extensions getExtensions() {
+        return extensions;
+    }
+
+    public void setExtensions(Extensions extensions) {
+        this.extensions = extensions;
+    }
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("MortgageLoan{");
         sb.append("qualifyingRatePercent='").append(qualifyingRatePercent).append('\'');
         sb.append(", buydownTemporarySubsidyFundingIndicator='").append(buydownTemporarySubsidyFundingIndicator).append('\'');
         sb.append(", loanLevelCreditScoreValue=").append(loanLevelCreditScoreValue);
+        sb.append(", extensions=").append(extensions);
         sb.append('}');
         return sb.toString();
     }

@@ -15,6 +15,9 @@ public class Liability implements Serializable {
     @XmlElement(name="monthlyPaymentAmount")
     protected String monthlyPaymentAmount;
 
+    @XmlElement(name = "Extensions")
+    protected Extensions extensions;
+
     public String getBorrowerSeqNumber() {
         return borrowerSeqNumber;
     }
@@ -31,11 +34,20 @@ public class Liability implements Serializable {
         this.monthlyPaymentAmount = monthlyPaymentAmount;
     }
 
+    public Extensions getExtensions() {
+        return extensions;
+    }
+
+    public void setExtensions(Extensions extensions) {
+        this.extensions = extensions;
+    }
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Liability{");
         sb.append("borrowerSeqNumber='").append(borrowerSeqNumber).append('\'');
         sb.append(", monthlyPaymentAmount='").append(monthlyPaymentAmount).append('\'');
+        sb.append(", extensions=").append(extensions);
         sb.append('}');
         return sb.toString();
     }
